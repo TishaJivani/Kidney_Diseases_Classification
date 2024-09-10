@@ -72,12 +72,12 @@ class ConfigurationManager:
     def get_evaluation_config(self) -> EvaluationConfig:
         model_path = "artifacts/training/model.h5"
         training_data_path = "artifacts/data_ingestion/kidney-ct-scan-image"
-        mlflow_uri = os.environ['MLFLOW_TRACKING_URI']
+        # mlflow_uri = os.environ['MLFLOW_TRACKING_URI']
 
         eval_config = EvaluationConfig(
             path_of_model=model_path,
             training_data=training_data_path,
-            mlflow_uri=mlflow_uri,
+            # mlflow_uri=mlflow_uri,
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE
